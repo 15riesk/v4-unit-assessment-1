@@ -2,12 +2,12 @@
 /* Create an array called 'groceries' that contains three grocery items of your choice as strings. */
 
 //CODE HERE
-
+let groceries = ['apple', 'orange', 'papaya']
 //////////////////STEP 2////////////////////
 /* Create a variable called 'yourName' that is assigned the value of your name as a string. */
 
 //CODE HERE
-
+let yourName = 'Kacey'
 //////////////////STEP 3////////////////////
 /*
     Create a function called 'setGroceryListTitle' that takes in one parameter called 'x'. 
@@ -17,7 +17,9 @@
 */
 
 //CODE HERE
-
+let setGroceryListTitle = (x) => {
+    return `${x}'s Grocery List`
+}
 //////////////////STEP 4////////////////////
 /* 
     Create a function called 'addItem' that takes in one parameter called 'item'. 
@@ -27,7 +29,9 @@
 */
 
 //CODE HERE
-
+let addItem = (item) => {
+    groceries.push(item)
+}
 //////////////////STEP 5////////////////////
 /*
     Create a function called 'removeItem' that takes in one parameter called 'index'. 
@@ -37,7 +41,10 @@
 */
 
 //CODE HERE
-
+let removeItem = (index) => {
+    groceries.splice(index, 1)
+    displayData()
+}
 //////////////////STEP 6////////////////////
 /*
     Create a function called 'checkGroceryCount'. Inside of checkGroceryCount, 
@@ -50,13 +57,21 @@
 */
 
 //CODE HERE
-
-
+let checkGroceryCount = () => {
+    let num = groceries.length
+    if (num > 5) {
+        return 'That looks like a big trip'
+    } else if (num === 1) {
+        return `${num} item`
+    } else if (num < 5 && num > 1) {
+        return `${num} items`
+    }
+}
 //////////////////Check out your code!////////////////////
 /*
     Open javascript-3/DO_NOT_EDIT/index.html in your browser.
     You should be see a title - 'SomeName's Grocery List' and a subheading that says '0 items.'
-    If you type in the box and click the button, the item should be added to your list. 
-    The items counter should change as you add more items. 
-    If you double click on an item, it should be removed. 
+    If you type in the box and click the button, the item should be added to your list.
+    The items counter should change as you add more items.
+    If you double click on an item, it should be removed.
 */
