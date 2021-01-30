@@ -40,4 +40,5 @@ ul > li {
 p {
 	font-size: medium;
 	text-align: left;
+	clear: none;
 }
